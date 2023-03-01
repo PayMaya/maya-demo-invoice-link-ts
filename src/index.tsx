@@ -17,7 +17,7 @@ const store = updateStore()
 const persistor = persistStore(store)
 
 // check if API keys are provided - if not, don't render
-if (!(config.maya_payments.pub_api_key && config.maya_payments.sec_api_key)) {
+if (!(config.invoice.pub_api_key && config.invoice.sec_api_key)) {
   throw new Error('Incomplete API keys.')
 }
 
