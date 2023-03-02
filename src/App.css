@@ -184,7 +184,7 @@ p {
   border: 1px solid #ECEDEF;
   border-radius: 16px;
   box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.07);
-  margin: 0px 0.5vw;
+  margin: 0px 0.5vw 2vh;
   padding-bottom: 2vh
 }
 
@@ -206,7 +206,6 @@ p {
   flex-direction: row;
   margin: 0 1vw;
   justify-content: space-around;
-  text-align: center;
   font-weight: bold;
 }
 
@@ -233,8 +232,11 @@ p {
   border: 0;
   text-indent: 3%;
   outline: none;
-  text-align: center;
   width: 47%;
+}
+
+.invoice-form [type="number"] {
+  text-align: center;
 }
 
 .invoice-form input[type="text"]:focus, input[type="number"]:focus {
@@ -268,6 +270,35 @@ p {
   margin-left: 1vw;
 }
 
-.label-default {
-  color: gray;
+.transaction-form-layout {
+  font-family: "jeko-bold",sans-serif;
+  font-weight: bold;
+}
+
+.transaction-form-layout .container {
+  margin: 0px 2vw
+}
+
+.transaction-form-layout .container input {
+  margin: 0px 1vw;
+  width: 100%
+}
+
+.buyer-form-layout {
+  font-family: "jeko-bold",sans-serif;
+  font-weight: bold;
+}
+
+.buyer-form-layout .container {
+  margin: 0px 2vw
+}
+
+.buyer-form-layout .container input {
+  margin: 0px 1vw;
+  width: 100%
+}
+
+.submit-btn-container {
+  display: flex;
+  justify-content: center;
 }
