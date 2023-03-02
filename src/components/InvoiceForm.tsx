@@ -47,8 +47,8 @@ function InvoiceForm() {
         <>  
             <div className="invoice-form-layout header">
                 <p className="long-label"> Name </p>
-                <p> Quantity </p>
-                <p> Unit Price </p>
+                <p> Qty. </p>
+                <p> Price </p>
                 <p> Amount </p>
             </div>
                 {items.map((item, index) => {
