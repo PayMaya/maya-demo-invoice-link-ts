@@ -188,7 +188,18 @@ p {
   padding-bottom: 2vh
 }
 
-.invoice-form-layout {
+.invoice-form-layout.header {
+  font-family: "jeko-bold",sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 1vw;
+  justify-content: space-around;
+  text-align: center;
+  font-weight: bold;
+}
+
+.invoice-form-layout.body {
   font-family: "jeko-bold",sans-serif;
   display: flex;
   flex-wrap: wrap;

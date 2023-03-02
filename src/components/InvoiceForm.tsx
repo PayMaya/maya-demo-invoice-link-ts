@@ -45,7 +45,7 @@ function InvoiceForm() {
 
     return (
         <>  
-            <div className="invoice-form-layout">
+            <div className="invoice-form-layout header">
                 <p className="long-label"> Name </p>
                 <p> Quantity </p>
                 <p> Unit Price </p>
@@ -53,7 +53,7 @@ function InvoiceForm() {
             </div>
                 {items.map((item, index) => {
                     return (
-                        <div key={index} className="invoice-form-layout">
+                        <div key={index} className="invoice-form-layout body">
                             <button className="btn red" onClick={(e: React.SyntheticEvent) => deleteItem(e, index)}> X </button>
                             <input 
                                 type="text"
