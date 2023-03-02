@@ -15,7 +15,7 @@ function InvoicePage() {
             />
             <TitleSection text='Invoice'/>
             <ContentSection>
-                    <form name="form1" className="invoice-form">
+                    <form className="invoice-form">
                         <div className="form-container">
                             <h2> Items </h2>
                             <InvoiceForm />
