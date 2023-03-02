@@ -27,7 +27,7 @@ function InvoiceForm() {
     }
 
     const setItemValue = (e: React.ChangeEvent<HTMLInputElement>, index: number, field: string) => {
-        const value: string | number = isNaN(+(e.target.value)) ? e.target.value : e.target.value
+        const value = e.target.value
         const updatedItem = { ...items[index], [field]: value }
         updatedItem.amount = updatedItem.quantity * updatedItem.unitPrice
         const updatedItems = items.slice()
