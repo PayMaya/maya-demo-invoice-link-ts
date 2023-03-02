@@ -7,7 +7,7 @@ interface InvoiceItem {
     amount: number
 }
 
-function InvoiceForm() {
+function ItemsForm() {
     const initItem: InvoiceItem = {
         name: '',
         quantity: 0,
@@ -45,7 +45,7 @@ function InvoiceForm() {
 
     return (
         <>  
-            <div className="invoice-form-layout header">
+            <div className="item-form-layout header">
                 <p className="long-label"> Name </p>
                 <p> Qty. </p>
                 <p> Price </p>
@@ -53,7 +53,7 @@ function InvoiceForm() {
             </div>
                 {items.map((item, index) => {
                     return (
-                        <div key={index} className="invoice-form-layout body">
+                        <div key={index} className="item-form-layout body">
                             <button className="btn red" onClick={(e: React.SyntheticEvent) => deleteItem(e, index)}> X </button>
                             <input 
                                 type="text"
@@ -101,4 +101,4 @@ function InvoiceForm() {
     )
 }
 
-export default InvoiceForm
+export default ItemsForm

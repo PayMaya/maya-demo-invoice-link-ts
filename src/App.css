@@ -188,27 +188,6 @@ p {
   padding-bottom: 2vh
 }
 
-.invoice-form-layout.header {
-  font-family: "jeko-bold",sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin: 0 1vw;
-  justify-content: space-around;
-  text-align: center;
-  font-weight: bold;
-}
-
-.invoice-form-layout.body {
-  font-family: "jeko-bold",sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin: 0 1vw;
-  justify-content: space-around;
-  font-weight: bold;
-}
-
 .invoice-form {
   font-family: "jeko-bold",sans-serif;
   display: flex;
@@ -243,11 +222,32 @@ p {
   outline: none !important;
 }
 
-.invoice-form-layout .short-input {
+.item-form-layout .short-input {
   width: 12%
 }
 
-.invoice-form-layout .long-label {
+.item-form-layout.header {
+  font-family: "jeko-bold",sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 1vw;
+  justify-content: space-around;
+  text-align: center;
+  font-weight: bold;
+}
+
+.item-form-layout.body {
+  font-family: "jeko-bold",sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 1vw;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.item-form-layout .long-label {
   width: 47%;
 }
 

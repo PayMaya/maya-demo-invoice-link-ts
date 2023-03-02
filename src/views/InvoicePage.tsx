@@ -2,7 +2,7 @@ import BuyerForm from "../components/BuyerForm";
 import ContentSection from "../components/ContentSection";
 import Footer from "../components/Footer";
 import HomeButton from "../components/HomeButton";
-import InvoiceForm from "../components/InvoiceForm";
+import ItemsForm from "../components/ItemsForm";
 import NavBar from "../components/NavBar";
 import TitleSection from "../components/TitleSection";
 import TransactionForm from "../components/TransactionForm";
@@ -24,7 +24,7 @@ function InvoicePage() {
                     </div>
                     <div className="form-container">
                         <h2> Items </h2>
-                        <InvoiceForm />
+                        <ItemsForm />
                     </div>
                     <div className="form-container">
                         <h2> Buyer Details </h2>
