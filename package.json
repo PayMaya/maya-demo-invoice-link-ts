@@ -30,7 +30,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "sonar-scan": "sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.sources=src/ -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.login=$SONAR_KEY -Dsonar.projectVersion=$SONAR_PROJECT_VERSION",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -57,8 +56,5 @@
   },
   "overridesComments": {
     "nth-check": "https://security.snyk.io/vuln/SNYK-JS-NTHCHECK-1586032"
-  },
-  "devDependencies": {
-    "sonarqube-scanner": "^3.0.1"
   }
 }
