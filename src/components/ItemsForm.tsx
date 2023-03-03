@@ -38,7 +38,6 @@ function ItemsForm() {
     const deleteItem = (e: React.SyntheticEvent, index: number) => {
         e.preventDefault()
         const updatedItems = items.slice()
-        console.log(updatedItems[index])
         updatedItems.splice(index, 1)
         setItems(updatedItems)
     }
@@ -57,6 +56,7 @@ function ItemsForm() {
                             <button className="btn red" onClick={(e: React.SyntheticEvent) => deleteItem(e, index)}> X </button>
                             <input 
                                 type="text"
+                                name="itemName"
                                 placeholder="Item Name" 
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setItemValue(e, index, 'name')}
                                 value={item.name}
@@ -64,6 +64,7 @@ function ItemsForm() {
                             />
                             <input 
                                 type="number" 
+                                name="quantity"
                                 className="short-input"
                                 placeholder="Quantity" 
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setItemValue(e, index, 'quantity')}
@@ -73,6 +74,7 @@ function ItemsForm() {
                             />
                             <input 
                                 type="number"
+                                name="unitPrice"
                                 className="short-input"
                                 placeholder="Unit Price"
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setItemValue(e, index, 'unitPrice')} 
@@ -82,6 +84,7 @@ function ItemsForm() {
                             />
                             <input 
                                 type="number" 
+                                name="amount"
                                 className="short-input" 
                                 placeholder="Amount" 
                                 value={+item.amount} 

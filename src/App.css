@@ -180,6 +180,11 @@ p {
   flex: 1 0 auto;
 }
 
+.payment-text {
+  font-size: 1.2em;
+  margin: 0% 5%;
+}
+
 .form-container {
   border: 1px solid #ECEDEF;
   border-radius: 16px;
@@ -200,7 +205,7 @@ p {
   justify-content: center;
 }
 
-.invoice-form input[type="text"], [type="number"] {
+.invoice-form input[type="text"], [type="number"], [type="email"] {
   font-family: "jeko-bold",sans-serif;
   background-color : #F4F5F5; 
   width: 100%;
@@ -218,7 +223,7 @@ p {
   text-align: center;
 }
 
-.invoice-form input[type="text"]:focus, input[type="number"]:focus {
+.invoice-form input[type="text"]:focus, input[type="number"]:focus, [type="email"]:focus {
   outline: none !important;
 }
 
