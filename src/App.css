@@ -180,6 +180,11 @@ p {
   flex: 1 0 auto;
 }
 
+.payment-text {
+  font-size: 1.2em;
+  margin: 0% 5%;
+}
+
 .form-container {
   border: 1px solid #ECEDEF;
   border-radius: 16px;
