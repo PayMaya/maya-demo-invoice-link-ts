@@ -6,6 +6,7 @@ function TransactionForm() {
                     <label className="item"> Invoice Number </label> <br />
                     <input 
                         type="text"
+                        name="invoiceNum"
                         className="item"
                         placeholder="Invoice Number"
                         required 
@@ -15,6 +16,7 @@ function TransactionForm() {
                     <label className="item"> Request Reference Number </label> <br />
                     <input 
                         type="text"
+                        name="rrn"
                         className="item"
                         placeholder="Request Reference Number"
                         required 
