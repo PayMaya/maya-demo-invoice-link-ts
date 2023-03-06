@@ -5,6 +5,12 @@ import config from '../config';
 const invoiceUrl: string = config.invoice.url
 const secretAuth: string = Buffer.from(`${config.invoice.sec_api_key}:`, 'binary').toString('base64')
 
+/* 
+    For demo purposes, the following functions were done on the frontend. 
+    However, when implementing for commercial use, please do the following transactions
+    on your backend servers to protect the linkId of the customer.
+*/
+
 export const generateInvoice = async (newInvoiceDetails: NewInvoiceDetails) => {
     const { 
         invoiceNum: invoiceNumber, rrn: requestReferenceNumber,

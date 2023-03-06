@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+# Maya Invoice Link Demo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This mini application demonstrates the use of [Maya Invoice API](https://developers.maya.ph/docs/invoice-api-integration)
+in order to generate an electronic invoice which the user can pay for using their Maya wallet or card.
 
-## Available Scripts
+If you want to see the relevant integration code directly, see the file [invoiceService.ts](src/services/invoiceService.ts)
 
-In the project directory, you can run:
+This project was created with React (React Redux and Thunk) and TypeScript.
 
-### `npm start`
+Do not build your application on top of this demo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+For demo purposes, the functions in [invoiceService.ts](src/services/invoiceService.ts) were done on the frontend. 
+However, when implementing for commercial use, please do the following transactions
+on your backend servers to protect the linkId of the customer.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Requirements
+1. Pay with Maya API keys (public and secret)- needed as authorization in API calls
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Run the Application
+1. Run `npm install` to install all needed packages.
+2. Run `npm start` to start the application. (see next part for note on environment variables) 
 
-### `npm run build`
+Example: 
+> REACT_APP_WALLET_PUBLIC_API_KEY='pk-abcdefhij' npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Environment variables
+You can set these variables in your environment, or when running the application, or in a `.env` file in the root directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| env variable                      | description                                 | default               |
+|-----------------------------------|---------------------------------------------|-----------------------|
+| REACT_APP_WALLET_PUBLIC_API_KEY | (required) public api key                   |                       |
+| REACT_APP_WALLET_SECRET_API_KEY | (required) secret api key    |                       |
+| REACT_APP_HOST_URL                | host url of the app, used for redirect urls | http://localhost:3000 |
+| REACT_APP_PATH_PREFIX             | path prefix, used for redirect urls         | /                     |
+| PORT                              | port that the app listens to                | 3000                  |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Using a .env file
+You can create a `.env` file in the root folder with values.
 
-### `npm run eject`
+Example
+```ini
+REACT_APP_WALLET_PUBLIC_API_KEY=pk-gjldkfjgkldfjgljdfglawas
+REACT_APP_WALLET_SECRET_API_KEY=sk-sjsdfhdsjfhsjkldfsdfhsdf
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## APIs Used
+1. [Pay With Maya - Recurring Wallet Payments](https://developers.maya.ph/docs/invoice-api-integration) 
+    - https://pg-sandbox.paymaya.com/invoice/v2/invoices
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Features
+1. Enter required details for electronic invoice
+2. Generate invoice URL
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Codebase (`src` folder)
+### **Frontend**
+##### `App.tsx`
+Routing / handling of React views / pages
+##### `App.css`
+CSS for the application
+##### `src/actions`
+Redux actions
+##### `src/components`
+Customized React components used within the application
+##### `src/reducers`
+Redux reducers
+##### `src/thunks`
+Redux thunks for handling asynchronous logic
+##### `src/views`
+Customized React views / pages
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Backend**
+##### `src/services`
+Service files - API calls
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **Miscellaneous**
+##### `src/types`
+Type assertions
+
+
+## Additional Resources
+1. [Sandbox credentials and Maya account that can be used during paying with Maya](https://developers.maya.ph/reference/sandbox-credentials-and-cards)
+2. [Maya Invoice API Integration](https://developers.maya.ph/docs/invoice-api-integration)
+3. [Using webhooks](https://developers.maya.ph/docs/receive-real-time-payment-information-using-webhooks)
+
