@@ -3,8 +3,8 @@ const config = {
     path_prefix: process.env.REACT_APP_PATH_PREFIX || '/',
     invoice: {
       url: 'https://pg-sandbox.paymaya.com/invoice/v2',
-      pub_api_key: process.env.REACT_APP_VAULT_PUBLIC_API_KEY,
-      sec_api_key: process.env.REACT_APP_VAULT_SECRET_API_KEY,
+      pub_api_key: process.env.REACT_APP_INVOICE_PUBLIC_API_KEY,
+      sec_api_key: process.env.REACT_APP_INVOICE_SECRET_API_KEY,
     },
 }
   

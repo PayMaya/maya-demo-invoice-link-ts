@@ -16,22 +16,22 @@ on your backend servers to protect the linkId of the customer.
 ---
 
 ## Requirements
-1. Pay with Maya API keys (public and secret)- needed as authorization in API calls
+1. Maya Invoice API keys (public and secret)- needed as authorization in API calls
 
 ## How to Run the Application
 1. Run `npm install` to install all needed packages.
 2. Run `npm start` to start the application. (see next part for note on environment variables) 
 
 Example: 
-> REACT_APP_WALLET_PUBLIC_API_KEY='pk-abcdefhij' npm start
+> REACT_APP_INVOICE_PUBLIC_API_KEY='pk-abcdefhij' npm start
 
 ## Environment variables
 You can set these variables in your environment, or when running the application, or in a `.env` file in the root directory.
 
 | env variable                      | description                                 | default               |
 |-----------------------------------|---------------------------------------------|-----------------------|
-| REACT_APP_WALLET_PUBLIC_API_KEY | (required) public api key                   |                       |
-| REACT_APP_WALLET_SECRET_API_KEY | (required) secret api key    |                       |
+| REACT_APP_INVOICE_PUBLIC_API_KEY | (required) public api key                   |                       |
+| REACT_APP_INVOICE_SECRET_API_KEY | (required) secret api key    |                       |
 | REACT_APP_HOST_URL                | host url of the app, used for redirect urls | http://localhost:3000 |
 | REACT_APP_PATH_PREFIX             | path prefix, used for redirect urls         | /                     |
 | PORT                              | port that the app listens to                | 3000                  |
@@ -41,8 +41,8 @@ You can create a `.env` file in the root folder with values.
 
 Example
 ```ini
-REACT_APP_WALLET_PUBLIC_API_KEY=pk-gjldkfjgkldfjgljdfglawas
-REACT_APP_WALLET_SECRET_API_KEY=sk-sjsdfhdsjfhsjkldfsdfhsdf
+REACT_APP_INVOICE_PUBLIC_API_KEY=pk-gjldkfjgkldfjgljdfglawas
+REACT_APP_INVOICE_SECRET_API_KEY=sk-sjsdfhdsjfhsjkldfsdfhsdf
 ```
 
 
