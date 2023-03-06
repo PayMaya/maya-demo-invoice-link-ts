@@ -8,7 +8,7 @@ const secretAuth: string = Buffer.from(`${config.invoice.sec_api_key}:`, 'binary
 /* 
     For demo purposes, the following functions were done on the frontend. 
     However, when implementing for commercial use, please do the following transactions
-    on your backend servers to protect the linkId of the customer.
+    on your backend servers.
 */
 
 export const generateInvoice = async (newInvoiceDetails: NewInvoiceDetails) => {
