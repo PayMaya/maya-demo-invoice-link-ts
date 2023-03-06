@@ -29,7 +29,7 @@ h2 {
 }
 
 p {
-  font-family: "cerebri-sans"
+  font-family: "cerebri-sans", "sans-serif"
 }
 
 .title-section {
@@ -208,7 +208,7 @@ p {
 .invoice-form input[type="text"], [type="number"], [type="email"] {
   font-family: "jeko-bold",sans-serif;
   background-color : #F4F5F5; 
-  width: 100%;
+  width: 47%;
   height: 6vh;
   border-radius: 16px;
   margin: 1vh 0;
@@ -216,7 +216,6 @@ p {
   border: 0;
   text-indent: 3%;
   outline: none;
-  width: 47%;
 }
 
 .invoice-form [type="number"] {
