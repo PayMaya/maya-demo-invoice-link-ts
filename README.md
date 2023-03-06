@@ -47,7 +47,7 @@ REACT_APP_WALLET_SECRET_API_KEY=sk-sjsdfhdsjfhsjkldfsdfhsdf
 
 
 ## APIs Used
-1. [Pay With Maya - Recurring Wallet Payments](https://developers.maya.ph/docs/invoice-api-integration) 
+1. [Maya Invoice API](https://developers.maya.ph/docs/invoice-api-integration) 
     - https://pg-sandbox.paymaya.com/invoice/v2/invoices
 
 ## Features
