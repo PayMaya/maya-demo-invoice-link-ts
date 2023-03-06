@@ -17,7 +17,7 @@ function InvoiceUrlClipboard () {
                     <input type="text" value={invoiceUrl} readOnly />
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACZSURBVFiF7ZZBCoAgEEU/ER4q7HzZqdp0Fb1GLVICQRhn1FrMgyGIGl/2qQGUn2IA7AACgItYR0sBV7FwFwEfmy4tm9aQnqo7E/E6TiZSeTyv1NSI5TvAyUReTiIgyYTFuxNsAWkmivdTM9ANFVABFZgL508M+hdQ0Q+RCqjA5wIhHi1jjTXrwaLFSLZJBEyUSKNZ96FUGcYNONZzkcAxlx4AAAAASUVORK5CYII=" 
                         alt='Clipboard icon'
-                        className='user-img'
+                        className='clipboard-img'
                         onClick={() => copy()}
                     />
                 </span>
