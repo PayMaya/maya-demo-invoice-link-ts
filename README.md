@@ -32,6 +32,7 @@ You can set these variables in your environment, or when running the application
 |-----------------------------------|---------------------------------------------|-----------------------|
 | REACT_APP_INVOICE_PUBLIC_API_KEY | (required) public api key                   |                       |
 | REACT_APP_INVOICE_SECRET_API_KEY | (required) secret api key    |                       |
+| REACT_APP_INVOICE_PG_URL | Maya payment gateway url    | https://pg-sandbox.paymaya.com/invoice/v2 |
 | REACT_APP_HOST_URL                | host url of the app, used for redirect urls | http://localhost:3000 |
 | REACT_APP_PATH_PREFIX             | path prefix, used for redirect urls         | /                     |
 | PORT                              | port that the app listens to                | 3000                  |
