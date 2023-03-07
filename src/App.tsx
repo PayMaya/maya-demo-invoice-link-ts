@@ -10,7 +10,7 @@ function App() {
   return (
     <Router basename={config.path_prefix}>
       <Routes>
-        <Route path="/invoice" element={<InvoicePage />} />
+        <Route path="/" element={<InvoicePage />} />
         <Route path="/purchase/success" element={<PurchaseSuccessPage />} />
         <Route path="/purchase/failed" element={<PurchaseFailedPage />} />
         <Route path="/purchase/canceled" element={<PurchaseCanceledPage />} />
