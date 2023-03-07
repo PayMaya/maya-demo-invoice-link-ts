@@ -11,7 +11,7 @@ Do not build your application on top of this demo.
 
 For demo purposes, the functions in [invoiceService.ts](src/services/invoiceService.ts) were done on the frontend. 
 However, when implementing for commercial use, please do the following transactions
-on your backend servers to protect the linkId of the customer.
+on your backend servers.
 
 ---
 
