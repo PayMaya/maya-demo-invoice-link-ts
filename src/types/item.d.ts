@@ -6,5 +6,5 @@ interface Item {
         value: number
     },
     name: string,
-    quantity: number
+    quantity: string
 }
