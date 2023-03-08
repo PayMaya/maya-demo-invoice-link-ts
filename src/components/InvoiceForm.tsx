@@ -33,12 +33,12 @@ function InvoiceForm() {
             rrn: form.rrn.value,
             itemName: (isList) ? Array.from(form.itemName as { value: string }[]).map(({ value }) => value) : [(form.itemName as { value: string }).value],
             quantity: (isList) ? Array.from(form.quantity as { value: string }[]).map(({ value }) => value) : [(form.quantity as { value: string }).value],
-            unitPrice: (isList) ? Array.from(form.unitPrice as { value: number }[]).map(({ value }) => value) : [+(form.unitPrice as { value: number }).value],
-            amount: (isList) ? Array.from(form.amount as { value: number }[]).map(({ value }) => value) : [+(form.amount as { value: number }).value],
+            unitPrice: (isList) ? Array.from(form.unitPrice as { value: number }[]).map(({ value }) => +value) : [+(form.unitPrice as { value: number }).value],
+            amount: (isList) ? Array.from(form.amount as { value: number }[]).map(({ value }) => +value) : [+(form.amount as { value: number }).value],
             firstName: form.firstName.value,
             lastName: form.lastName.value,
             email: form.email.value,
-            phone: form.invoiceNum.value,
+            phone: form.phone.value,
             countryCode: form.countryCode.value,
         }
         
