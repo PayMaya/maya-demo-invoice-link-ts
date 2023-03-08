@@ -9,10 +9,10 @@ import { generateInvoiceThunk } from "../thunks/invoice";
 interface InvoiceHtmlForm extends EventTarget {
     invoiceNum: { value: string }
     rrn: { value: string }
-    itemName: { value: string }[]
-    quantity: { value: number }[]
-    unitPrice: { value: number }[]
-    amount: { value: number }[]
+    itemName: { value: string }[] | { value: string }
+    quantity: { value: number }[] | { value: number }
+    unitPrice: { value: number }[] | { value: number }
+    amount: { value: number }[] | { value: number }
     firstName: { value: string }
     lastName: { value: string }
     email: { value: string }
@@ -26,13 +26,15 @@ function InvoiceForm() {
     const generateInvoice = (e: React.SyntheticEvent) => {
         e.preventDefault()
         const form = e.target as InvoiceHtmlForm
+        const isList = form.itemName instanceof RadioNodeList
+
         const newInvoiceDetails: NewInvoiceDetails  = {
             invoiceNum: form.invoiceNum.value,
             rrn: form.rrn.value,
-            itemName: Array.from(form.itemName).map(({ value }) => value),
-            quantity: Array.from(form.quantity).map(({ value }) => +value),
-            unitPrice: Array.from(form.unitPrice).map(({ value }) => +value),
-            amount: Array.from(form.amount).map(({ value }) => +value),
+            itemName: (isList) ? Array.from(form.itemName as { value: string }[]).map(({ value }) => value) : [(form.itemName as { value: string }).value],
+            quantity: (isList) ? Array.from(form.quantity as { value: number }[]).map(({ value }) => value) : [+(form.quantity as { value: number }).value],
+            unitPrice: (isList) ? Array.from(form.unitPrice as { value: number }[]).map(({ value }) => value) : [+(form.unitPrice as { value: number }).value],
+            amount: (isList) ? Array.from(form.amount as { value: number }[]).map(({ value }) => value) : [+(form.amount as { value: number }).value],
             firstName: form.firstName.value,
             lastName: form.lastName.value,
             email: form.email.value,
