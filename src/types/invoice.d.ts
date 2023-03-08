@@ -39,7 +39,7 @@ interface NewInvoiceDetails {
     invoiceNum: string
     rrn: string
     itemName: string[]
-    quantity: number[]
+    quantity: string[]
     unitPrice: number[]
     amount: number[]
     firstName: string

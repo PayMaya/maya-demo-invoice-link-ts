@@ -10,7 +10,7 @@ interface InvoiceHtmlForm extends EventTarget {
     invoiceNum: { value: string }
     rrn: { value: string }
     itemName: { value: string }[] | { value: string }
-    quantity: { value: number }[] | { value: number }
+    quantity: { value: string }[] | { value: string }
     unitPrice: { value: number }[] | { value: number }
     amount: { value: number }[] | { value: number }
     firstName: { value: string }
@@ -32,7 +32,7 @@ function InvoiceForm() {
             invoiceNum: form.invoiceNum.value,
             rrn: form.rrn.value,
             itemName: (isList) ? Array.from(form.itemName as { value: string }[]).map(({ value }) => value) : [(form.itemName as { value: string }).value],
-            quantity: (isList) ? Array.from(form.quantity as { value: number }[]).map(({ value }) => value) : [+(form.quantity as { value: number }).value],
+            quantity: (isList) ? Array.from(form.quantity as { value: string }[]).map(({ value }) => value) : [(form.quantity as { value: string }).value],
             unitPrice: (isList) ? Array.from(form.unitPrice as { value: number }[]).map(({ value }) => value) : [+(form.unitPrice as { value: number }).value],
             amount: (isList) ? Array.from(form.amount as { value: number }[]).map(({ value }) => value) : [+(form.amount as { value: number }).value],
             firstName: form.firstName.value,
