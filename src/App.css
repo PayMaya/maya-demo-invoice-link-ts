@@ -278,13 +278,22 @@ p {
   font-weight: bold;
 }
 
-.transaction-form-layout .container {
+.transaction-form-layout .input-row-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0px 2vw
 }
 
-.transaction-form-layout .container input {
+.transaction-form-layout .input-row-container input {
   margin: 0px 1vw;
   width: 100%
+}
+.transaction-form-layout .input-row-container .input-container {
+  display: inline;
+  flex-grow: 1;
+  margin: 0 2.5vw;
 }
 
 .buyer-form-layout {
@@ -292,13 +301,23 @@ p {
   font-weight: bold;
 }
 
-.buyer-form-layout .container {
+.buyer-form-layout .input-row-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0px 2vw
 }
 
-.buyer-form-layout .container input {
-  margin: 0px 1vw;
-  width: 100%
+.buyer-form-layout .input-row-container input {
+  margin: 0px 0.5vw;
+  width: 100%;
+}
+
+.buyer-form-layout .input-row-container .input-container {
+  display: inline;
+  flex-grow: 1;
+  margin: 0 2.5vw;
 }
 
 .submit-btn-container {
